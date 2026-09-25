@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>方舟鸡窝 · Lost Ark Manager — 命运方舟玩家的指挥中心</title>
+<meta name="description" content="方舟鸡窝（Lost Ark Manager）是一款面向命运方舟玩家的桌面管理工具：角色档案查询、副本进度追踪、混沌门与世界BOSS桌面提醒、汉化中心、团队云端同步。本地优先，安全私密。" />
+<meta property="og:title" content="方舟鸡窝 · Lost Ark Manager" />
+<meta property="og:description" content="角色 · 进度 · 日常 · 汉化 —— 一窗掌控你的亚克拉西亚。" />
+<meta property="og:type" content="website" />
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Noto+Serif+SC:wght@600;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top">
+      <img class="brand__icon" src="assets/img/favicon.png" alt="方舟鸡窝图标" />
+      <span class="brand__text"><b>方舟鸡窝</b><i>LOST ARK MANAGER</i></span>
+    </a>
+    <nav class="nav__links" aria-label="主导航">
+      <a href="#features">功能亮点</a>
+      <a href="#character">角色档案</a>
+      <a href="#localize">汉化中心</a>
+      <a href="#themes">主题</a>
+      <a href="#download" class="nav__cta">免费下载</a>
+    </nav>
+    <div class="nav__burger" id="burger" aria-label="打开菜单"><span></span><span></span></div>
+  </div>
+  <nav class="nav__mobile" id="mobileMenu">
+    <a href="#features">功能亮点</a>
+    <a href="#character">角色档案</a>
+    <a href="#localize">汉化中心</a>
+    <a href="#themes">主题</a>
+    <a href="#download" class="nav__cta">免费下载</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__slides" aria-hidden="true"></div>
+  <div class="hero__veil" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="kicker reveal">FOR LOST ARK PLAYERS · 命运方舟玩家指挥中心</p>
+    <h1 class="hero__title reveal">
+      <span class="hero__zh">方舟鸡窝</span>
+      <span class="hero__en">LOST&nbsp;ARK&nbsp;MANAGER</span>
+    </h1>
+    <p class="hero__sub reveal">角色档案 · 副本进度 · 日常提醒 · 汉化中心<br class="mobile-break" />一窗掌控你的 <em>亚克拉西亚</em>。</p>
+    <p class="hero__desc reveal">面向命运方舟玩家的桌面管理台。本地 SQLite 安全存储，云同步按需开启；国服 / 俄服 / 美服进度、角色与周常，全部心中有数。</p>
+    <div class="hero__cta reveal">
+      <a class="btn btn--primary" href="#download">免费下载
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="#features">看看它能帮你什么</a>
+    </div>
+    <div class="hero__stats reveal">
+      <div class="stat"><b data-count="12">0</b><span>套随身心主题</span></div>
+      <div class="stat"><b data-count="24">0</b><span>场日常 / 周</span></div>
+      <div class="stat"><b>3</b><span>区服同步支持</span></div>
+      <div class="stat"><b data-count="23">0</b><span>次迭代打磨</span></div>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span></span></div>
+</section>
+
+<section class="section features" id="features">
+  <div class="section__head reveal">
+    <p class="kicker">CORE ABILITIES</p>
+    <h2 class="section__title">把「管理」变成 <em>一气呵成</em></h2>
+    <p class="section__lead">为高强度的远征准备 —— 进度不靠记事本，提醒不靠盯点，汉化不靠手动替换。</p>
+  </div>
+  <div class="features__grid">
+    <article class="feature-card reveal">
+      <span class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+      <h3>角色档案查询</h3>
+      <p>俄服角色装备、铭刻、宝石、属性一键查询；英雄档案式面板，是配装模拟的数据地基。</p>
+      <i class="tag">ONE-TAP SCOUT</i>
+    </article>
+    <article class="feature-card reveal">
+      <span class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+      <h3>副本进度追踪</h3>
+      <p>每周重置自动归档，每车进度与收益分毫毕现。多角色下谁还差谁已清，一眼判明。</p>
+      <i class="tag">NO DOUBLE-RUN</i>
+    </article>
+    <article class="feature-card reveal">
+      <span class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+      <h3>日常活动提醒</h3>
+      <p>混沌门、世界 BOSS 全时段场次，桌面右下角优雅弹窗。提前量自定义，打本不误点。</p>
+      <i class="tag">DESKTOP PULSE</i>
+    </article>
+    <article class="feature-card reveal">
+      <span class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M9 7h7M9 11h5"/></svg></span>
+      <h3>汉化中心</h3>
+      <p>游戏内字体汉化包一键安装，也可随时还原原版；云字体预设含西里尔支持，游戏更新不焦虑。</p>
+      <i class="tag">FONT ENGINE</i>
+    </article>
+    <article class="feature-card reveal">
+      <span class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+      <h3>团队云端同步</h3>
+      <p>进度、阵容、成员与队伍一键绑定云端，多端一致。本地为核，同步按需开启，隐私不裸奔。</p>
+      <i class="tag">SYNC ON DEMAND</i>
+    </article>
+    <article class="feature-card reveal">
+      <span class="feature-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+      <h3>市场 &amp; 讨论区</h3>
+      <p>交易市场自由发布出售信息，讨论区玩家畅聊配装与攻略。社区该有的，都在这里。</p>
+      <i class="tag">COMMUNITY</i>
+    </article>
+  </div>
+</section>
+
+<section class="section split" id="character">
+  <div class="split__bg" aria-hidden="true"></div>
+  <div class="split__col split__copy">
+    <p class="kicker reveal">CHARACTER SCOUT · 英雄档案</p>
+    <h2 class="section__title reveal">一键，<br />把英雄<em>读进档案</em></h2>
+    <ul class="checklist reveal">
+      <li><b>四维全景</b>装备 · 铭刻 · 宝石 · 属性于一张面板，配装模拟的数据基座。</li>
+      <li><b>英雄档案式界面</b>信息密度与排版秩序，媲美游戏内档案页。</li>
+      <li><b>每日配额</b>FREE 5 次 / PRO 25 次，查询不过载，体验不排队。</li>
+      <li><b>区服优先</b>针对俄服线路优化，查询快、稳定、可预期。</li>
+    </ul>
+  </div>
+  <div class="split__col reveal">
+    <div class="arcane-card" id="scoutCard" role="img" aria-label="角色档案查询面板示意">
+      <div class="arcane-card__head">
+        <div class="arcane-card__avatar">K</div>
+        <div>
+          <b class="arcane-card__name">KingSlayer</b>
+          <span class="arcane-card__job">墨灵 · 辅助 · 1645</span>
+        </div>
+        <span class="arcane-card__lvl">Lv.70</span>
+      </div>
+      <div class="arcane-card__engraves"><i>怨恨</i><i>巫毒娃娃</i><i>尖刺重锤</i><i>速战速决</i><i>以太充能</i></div>
+      <div class="arcane-card__stats">
+        <div class="pbar"><span>攻击力</span><div class="pbar__track"><i style="width:82%"></i></div><b>92,410</b></div>
+        <div class="pbar"><span>致命</span><div class="pbar__track"><i style="width:64%"></i></div><b>1,152</b></div>
+        <div class="pbar"><span>迅速</span><div class="pbar__track"><i style="width:71%"></i></div><b>1,298</b></div>
+        <div class="pbar"><span>专长</span><div class="pbar__track"><i style="width:55%"></i></div><b>986</b></div>
+      </div>
+      <div class="arcane-card__gems"><i class="g10">10</i><i class="g9">9</i><i class="g9">9</i><i class="g8">8</i><i class="g8">8</i><i class="g7">7</i><i class="g7">7</i><i class="g6">6</i><i class="g6">6</i></div>
+      <div class="arcane-card__foot">装备 · 铭刻 · 宝石 · 属性 —— 实时档案</div>
+    </div>
+  </div>
+</section>
+
+<section class="section remind">
+  <div class="section__head reveal">
+    <p class="kicker">DAILY PULSE · 桌面提醒</p>
+    <h2 class="section__title">打本路上的 <em>第二双眼睛</em></h2>
+    <p class="section__lead">混沌门与世界 BOSS，每小时准点开播。专职桌面弹窗在你角落守时，绝不抢全屏游戏的焦点。</p>
+  </div>
+  <div class="remind__cards">
+    <article class="reminder-card reveal">
+      <span class="reminder-card__dot"></span>
+      <div class="reminder-card__meta">混沌门 · 混沌之门守卫战</div>
+      <h3>混沌门即将开启</h3>
+      <p>每周一 · 四 · 六 · 日，每小时 <b>准点</b><br />提前 <b>15 分钟</b>提醒已生效</p>
+      <footer>GLASS 皮肤 · 贴任务栏悬浮</footer>
+    </article>
+    <article class="reminder-card reminder-card--gold reveal">
+      <span class="reminder-card__dot"></span>
+      <div class="reminder-card__meta">世界 BOSS · 恶魔指挥官</div>
+      <h3>世界 BOSS 即将出现</h3>
+      <p>每周二 · 五 · 日，每小时 <b>:03</b><br />提前 <b>1 分钟</b>提醒已生效</p>
+      <footer>NEON 皮肤 · 桌面右下角</footer>
+    </article>
+  </div>
+  <p class="remind__note reveal">4 款皮肤任选 —— 玻璃 · 霓虹 · 暗金 · 极简；提前量与开关完全由你掌控。</p>
+</section>
+
+<section class="section loc" id="localize">
+  <div class="loc__bg" aria-hidden="true"></div>
+  <div class="loc__inner">
+    <div class="loc__copy reveal">
+      <p class="kicker">LOCALIZATION HUB · 汉化中心</p>
+      <h2 class="section__title">外服不迷路<br /><em>母语直连</em></h2>
+      <p class="loc__desc">游戏未汉化？魔改字体翻车？汉化中心给出工程级方案：不破坏游戏文件的字体替换、可随时还原原版、内置云端字体预设（含西里尔支持）。</p>
+      <div class="loc__steps">
+        <div class="step"><i>01</i><div><b>选择方案</b><span>区服一键匹配，或从云字体预设挑一款</span></div></div>
+        <div class="step"><i>02</i><div><b>下载安装</b><span>分片强校验，沿用下载镜像加速</span></div></div>
+        <div class="step"><i>03</i><div><b>原版还原</b><span>一键回收原版字体，进游戏即清爽中文</span></div></div>
+      </div>
+    </div>
+    <div class="loc__panel reveal" role="img" aria-label="汉化中心操作面板示意">
+      <div class="loc__panel-head"><b>汉化中心</b><span>区服：RU · 俄服</span></div>
+      <div class="loc__row loc__row--ok"><i>✓</i><div><b>font.lpk 汉化包</b><span>已安装 · 校验通过 · 含西里尔字形</span></div><em>1.0</em></div>
+      <div class="loc__row"><i>⌄</i><div><b>云字体预设</b><span>MiSans Demibold · FrizQuadrataC · 文源圆体</span></div><em>3 款</em></div>
+      <div class="loc__row"><i>↺</i><div><b>还原原版</b><span>随时回到官方字体，更新校验无忧</span></div><em>就绪</em></div>
+      <div class="loc__panel-foot"><button type="button">下载并安装</button><span>游戏更新时，先还原再更新，校验不卡检查</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section themes" id="themes">
+  <div class="section__head reveal">
+    <p class="kicker">12 THEMES · 主题工坊</p>
+    <h2 class="section__title">外观，也陪你<em>远征</em></h2>
+    <p class="section__lead">从极简到霓虹，从暗夜到晨曦 —— 十二套主题随打随换，深色护眼、浅色通透。</p>
+  </div>
+  <div class="themes__board reveal" role="img" aria-label="十二套主题色板">
+    <div class="theme-swatch" style="--c:#8b93a8"><i></i>dark</div>
+    <div class="theme-swatch" style="--c:#dfe5ef"><i></i>light</div>
+    <div class="theme-swatch" style="--c:#bcd2c6"><i></i>mist</div>
+    <div class="theme-swatch" style="--c:#c98d3b"><i></i>amber</div>
+    <div class="theme-swatch" style="--c:#1d2129"><i></i>onyx</div>
+    <div class="theme-swatch" style="--c:#f2b8a0"><i></i>peach</div>
+    <div class="theme-swatch" style="--c:#e79cb0"><i></i>rose</div>
+    <div class="theme-swatch" style="--c:#a64b56"><i></i>ruby</div>
+    <div class="theme-swatch" style="--c:#6d5a8c"><i></i>phantom</div>
+    <div class="theme-swatch" style="--c:#5fb8a6"><i></i>aurora</div>
+    <div class="theme-swatch" style="--c:#35d6e0"><i></i>cyber</div>
+    <div class="theme-swatch" style="--c:#e8e2d2"><i></i>salt</div>
+    <div class="themes__note">免费 6 套 · PRO 专属 6 套</div>
+  </div>
+</section>
+
+<section class="section download" id="download">
+  <div class="download__card reveal">
+    <p class="kicker">GET THE APP · 现在出发</p>
+    <h2 class="section__title">下载<em>方舟鸡窝</em></h2>
+    <p class="download__ver">最新版 · Windows 10/11 x64 · 桌面应用</p>
+    <div class="download__actions">
+      <a class="btn btn--primary btn--lg" href="https://up.lostarkjiwo.dpdns.org/https://github.com/jnercy/ark-chicken-coop-storage/releases/latest/download/lost-ark-manager.exe" target="_blank" rel="noopener">立即下载<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg></a>
+    </div>
+    <ul class="download__chips">
+      <li><b>应用内自更新</b><span>新版本自动提醒，镜像加速下载</span></li>
+      <li><b>本地数据优先</b><span>SQLite 落盘，无账号也能完整使用</span></li>
+      <li><b>单文件轻量</b><span>Tauri 2.0 构建，磁盘占用克制</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="section__head reveal">
+    <p class="kicker">FAQ</p>
+    <h2 class="section__title">常见问题</h2>
+  </div>
+  <div class="faq__list reveal">
+    <details><summary>需要登录才能使用吗？</summary><p>不需要。核心功能全部本地化，数据存于本机 SQLite；「团队云端同步」等协作功能可在登录后按需开启。</p></details>
+    <details><summary>支持哪些区服？</summary><p>国服（CN）、俄服（RU）、美服/欧服（US/EU）均支持，各区的日常重置与周常日历按各自时区精确计算。</p></details>
+    <details><summary>汉化包会破坏游戏文件吗？</summary><p>不会。汉化通过字体文件替换完成，且保留可一键还原的原版文件；游戏更新时先还原再更新即可。</p></details>
+    <details><summary>PRO 会员是什么？</summary><p>额外的主题与更高查询配额。免费版已覆盖全部核心管理功能，PRO 用于支持持续开发。</p></details>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand"><img src="assets/img/favicon.png" alt="" /><div><b>方舟鸡窝</b><span>Lost Ark Manager</span></div></div>
+    <p class="footer__note">方舟鸡窝为玩家自行开发的社区工具，与 Smilegate RPG / 腾讯互娱等官方机构无任何关联。「命运方舟」相关商标归其权利方所有。本站数据仅用于个人管理与玩家交流。</p>
+    <p class="footer__copy">© 2026 方舟鸡窝 · Designed for Ark travelers.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
